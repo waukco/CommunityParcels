@@ -1,14 +1,11 @@
-# AGOL Tools
-
-A set of python tools to assist working with AGOL feature services and AGOL.  A series of scripts are provided to demonstrate how to use this library.  If you are constructed your own process, you can start with these or use the _ExampleBaseSctructure.py script.  This provides the framework used by all the examples.
+# Community Parcels
 
 
 ## Features
 
-* Add, Delete, Update and Query Feature Services
-* Upload attachments to feature services
-* Publish an MXD to AGOL as a feature service
-* Get AGOL item information
+Update Community Parcels
+
+The Community Parcel solution will leverage the core ArcGIS Platform to help communities aggregate parcel information from authoritative sources in a simple and sustainable way and leverage this information in many workflows. 
 
 ## Instructions
 
@@ -22,9 +19,6 @@ A set of python tools to assist working with AGOL feature services and AGOL.  A 
  
 ## Resources
 
-Learn more about ArcGIS for Utilities Maps and App's [ArcGIS for Utilities Maps and App's](http://solutions.arcgis.com/utilities).
-
-Show me a list of other [Utilities GitHub repositories](http://esri.github.io/#Utilities).
 
 ## Issues
 
