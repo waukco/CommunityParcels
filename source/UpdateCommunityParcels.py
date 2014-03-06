@@ -96,10 +96,10 @@ def runScript(log,config):
         arcpy.AddMessage("Mapping Local Parcel data to Community Parcel Schema")
         arcpy.AddMessage("Community Parcel Update to ArcGIS Online Started, please be patient")
 
-    # Calculate the CVTTXDSCRP to the County Name
-        arcpy.CalculateField_management(CommunityParcelsLocalCopy, "CVTTXDSCRP", "\"5\"", "PYTHON", "")
-        print "Set County Code information"
-        arcpy.AddMessage("Calculate County Code Description")
+##    # Calculate the CVTTXDSCRP to the County Name
+##        arcpy.CalculateField_management(CommunityParcelsLocalCopy, "CVTTXDSCRP", "\"5\"", "PYTHON", "")
+##        print "Set County Code information"
+##        arcpy.AddMessage("Calculate County Code Description")
 
     # Add Attribute Index
 ##        arcpy.AddIndex_management(CommunityParcelsLocalCopy, "CVTTXDSCRP", "CountyDescriptionIndex", "NON_UNIQUE", "ASCENDING")
@@ -131,8 +131,8 @@ def runScript(log,config):
             print i
             #print len(myids)
             #print i/ float(len(myids))
-            print "Completed: {0:2f}%".format(a)( i/ float(len(myids))*100)
-            arcpy.AddMessage("Deleted: {0:2f}%".format(a)( i/ float(len(myids))*100))
+            print "Completed: {0:2f}%".format( i/ float(len(myids))*100)
+            arcpy.AddMessage("Deleted: {0:2f}%".format ( i/ float(len(myids))*100))
         print "Community Parcels upload Started"
         arcpy.AddMessage("Community Parcels upload started, please be patient, may take +- 5 minutes per 80,000 parcels.  For future consideration, please run tool during non-peak internet usage")
         fs.addFeatures(CommunityParcelsLocalCopy)
