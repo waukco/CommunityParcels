@@ -97,9 +97,9 @@ def runScript(log,config):
         arcpy.AddMessage("Community Parcel Update to ArcGIS Online Started, please be patient")
 
     # Calculate the CVTTXDSCRP to the County Name
-##        arcpy.CalculateField_management(CommunityParcelsLocalCopy, "CVTTXDSCRP", "\"5\"", "PYTHON", "")
-##        print "Set County Code information"
-##        arcpy.AddMessage("Calculate County Code Description")
+        arcpy.CalculateField_management(CommunityParcelsLocalCopy, "CVTTXDSCRP", "\"5\"", "PYTHON", "")
+        print "Set County Code information"
+        arcpy.AddMessage("Calculate County Code Description")
 
     # Add Attribute Index
 ##        arcpy.AddIndex_management(CommunityParcelsLocalCopy, "CVTTXDSCRP", "CountyDescriptionIndex", "NON_UNIQUE", "ASCENDING")
