@@ -32,7 +32,7 @@ def runScript(log,config):
     print "Loading Configuration File"
     arcpy.AddMessage("Loading Configuration File")
 
-    if arcpy.Exists(CommunityParcelsLocalCopy) == False:
+    if arcpy.Exists(LocalParcels) == False:
         print "Please specify a input parcel layer (LocalParcels=) in the configuration file, exiting"
         arcpy.AddMessage("Please specify a input parcel layer in the configuration file, exiting")
         sys.exit()
