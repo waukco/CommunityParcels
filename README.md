@@ -6,7 +6,6 @@
 Update Community Parcels
 
 The Community Parcel solution will leverage the core ArcGIS Platform to help communities aggregate parcel information from authoritative sources in a simple and sustainable way and leverage this information in many workflows. 
-Image:\Git\CommunityParcels\source\images\CommunityParcels.png
 
 ## Instructions
 
