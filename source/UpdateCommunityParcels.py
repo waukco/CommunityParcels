@@ -33,9 +33,30 @@ def runScript(log,config):
     arcpy.AddMessage("Loading Configuration File")
 
     if arcpy.Exists(CommunityParcelsLocalCopy) == False:
-        print "Input Data Does Not Exist, exiting"
-        arcpy.AddMessage("Input Parcel layer does not exist, exiting")
+        print "Please specify a input parcel layer (LocalParcels=) in the configuration file, exiting"
+        arcpy.AddMessage("Please specify a input parcel layer in the configuration file, exiting")
         sys.exit()
+
+    if arcpy.Exists(CommunityParcelsLocalCopy) == False:
+        print "Please specify a input community parcel layer (CommunityParcelsLocalCopy=) in the configuration file, exiting"
+        arcpy.AddMessage("Please specify a input parcel layer in the configuration file, exiting")
+        sys.exit()
+
+    if arcpy.Exists(username) == False:
+        print "Please specify a ArcGIS Online Username (username =)in the configuration file, exiting"
+        arcpy.AddMessage("Please specify a ArcGIS Online Username in the configuration file, exiting")
+        sys.exit()
+
+    if arcpy.Exists(password) == False:
+        print "Please specify a ArcGIS Online password (password =)in the configuration file, exiting"
+        arcpy.AddMessage("Please specify a ArcGIS Online password in the configuration file, exiting")
+        sys.exit()
+
+    if arcpy.Exists(deleteSQL) == False:
+        print "Please specify a SQL query (CVTTXDSCRP = 'some value') in the configuration file, exiting"
+        arcpy.AddMessage("Please specify a SQL query (CVTTXDSCRP = 'some value') in the configuration file, exiting")
+        sys.exit()
+
 
     fs = services.FeatureService(url=reportCurrentURL,username=username,password=password)
     if fs == None:
