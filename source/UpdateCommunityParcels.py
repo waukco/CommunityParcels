@@ -42,21 +42,20 @@ def runScript(log,config):
 ##        arcpy.AddMessage("Please specify a input parcel layer in the configuration file, exiting")
 ##        sys.exit()
 ##
-##    if arcpy.Exists(username) == False:
-##        print "Please specify a ArcGIS Online Username (username =)in the configuration file, exiting"
-##        arcpy.AddMessage("Please specify a ArcGIS Online Username in the configuration file, exiting")
-##        sys.exit()
-##
-##    if arcpy.Exists(password) == False:
-##        print "Please specify a ArcGIS Online password (password =)in the configuration file, exiting"
-##        arcpy.AddMessage("Please specify a ArcGIS Online password in the configuration file, exiting")
-##        sys.exit()
-##
-##    if arcpy.Exists(deleteSQL) == False:
-##        print "Please specify a SQL query (CVTTXDSCRP = 'some value') in the configuration file, exiting"
-##        arcpy.AddMessage("Please specify a SQL query (CVTTXDSCRP = 'some value') in the configuration file, exiting")
-##        sys.exit()
+    if username == "":
+        print "Please specify a ArcGIS Online Username (username =)in the configuration file, exiting"
+        arcpy.AddMessage(username)
+        sys.exit()
 
+    if password == "":
+        print "Please specify a ArcGIS Online password (password =)in the configuration file, exiting"
+        arcpy.AddMessage(password)
+        sys.exit()
+
+    if deleteSQL == "":
+        print "Please specify a SQL query (CVTTXDSCRP = 'some value') in the configuration file, exiting"
+        arcpy.AddMessage("Please specify a SQL query (CVTTXDSCRP = 'some value') in the configuration file, exiting")
+        sys.exit()
 
     fs = services.FeatureService(url=reportCurrentURL,username=username,password=password)
     if fs == None:
